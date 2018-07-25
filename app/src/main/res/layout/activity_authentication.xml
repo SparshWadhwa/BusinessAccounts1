@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/homescreengradient"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:padding="30sp"
+        android:layout_gravity="center"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:elevation="20sp"
+            android:gravity="center"
+            android:padding="10sp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:id="@+id/logo"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_panorama_fish_eye_black_24dp"/>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="EduHi"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/logo"
+                android:textSize="30sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:paddingTop="15sp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="15sp"
+                    android:src="@drawable/ic_phone_white_24dp"
+                    android:layout_height="wrap_content" />
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/phoneField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:hint="Super Secret Phone Number"
+                    android:inputType="phone"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"
+                    app:met_baseColor="@color/colorPrimary"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_underlineColor="@color/colorPrimary" />
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/codeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:backgroundTint="@color/colorPrimary"
+                android:onClick="requestCode"
+                android:src="@drawable/ic_mail_white_24dp" />
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/codeField"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneField"
+                android:hint="Enter Verification Code"
+                android:inputType="number"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                app:met_baseColor="@color/colorPrimary"
+                app:met_primaryColor="@color/colorPrimary"
+                app:met_underlineColor="@color/colorPrimary"
+                app:met_iconLeft="@drawable/code"
+                android:visibility="gone"
+                app:met_iconPadding="5dp" />
+            <Button
+                android:id="@+id/signInBtn"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/codeField"
+                android:padding="15sp"
+                android:background="@drawable/round_rectangle"
+                android:onClick="signIn"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:text="VERIFY"
+                android:layout_marginBottom="10sp"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
